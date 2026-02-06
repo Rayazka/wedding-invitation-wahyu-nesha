@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Common Tag -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wahyu ♡ Nesha | Wedding Invitation</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>❤︎</text></svg>"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Appearance -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Wahyu ♡ Nesha | Wedding Invitation"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Preconnect CDN -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+
+    <!-- Preload Resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4="
+      crossorigin="anonymous"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+      integrity="sha256-4rTIfo5GQTi/7UJqoyUJQKzxW8VN/YBH31+Cy+vTZj4="
+      crossorigin="anonymous"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha256-5P1JGBOIxI7FBAvT/mb1fCnI5n/NhQKzNUuW7Hq0fMc="
+      crossorigin="anonymous"
+      as="script"
+    />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    />
+
+    <!-- Dependencies CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+      integrity="sha256-4rTIfo5GQTi/7UJqoyUJQKzxW8VN/YBH31+Cy+vTZj4="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Dependencies JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha256-5P1JGBOIxI7FBAvT/mb1fCnI5n/NhQKzNUuW7Hq0fMc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+      <header
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center text-center position-relative overflow-hidden"
+      >
+        <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+      <div class="z-1 container">
+
+
+        <p class="mb-4 animate-love fs-4 make-gold">THE WEDDING OF</p>
+
+        <h1
+          class="display-1 fw-bold mb-5"
+          style="font-family: &quot;Great Vibes&quot;, cursive"
+        >
+          Wahyu & Nesha
+        </h1>
+
+        <div
+          class="mb-4 p-4 rounded d-inline-block border border-secondary border-opacity-50 shadow-sm glass-panel" style="min-width: 35vw"
+        >
+          <small>Kepada Yth. Bapak/Ibu/Saudara/i</small>
+          <h4 id="namaTamu" class="fw-bold mt-2">
+            Tamu Undangan
+          </h4>
+        </div>
+
+        <p class="lead my-3 fw-medium">Sabtu, 14 Februari 2026</p>
+
+        <button
+          onclick="bukaUndangan()"
+          class="btn-bukaUndangan btn btn-outline-auto btn-lg rounded-pill shadow px-4"
+        >
+          <i class="fa-solid fa-envelope-open fa-bounce me-2"></i> Buka Undangan
+        </button>
+      </div>
+    </header>
+
+    <main id="mainContent" class="d-none">
+      <audio id="bgMusic" loop>
+        <source src="assets/music.mp3" type="audio/mp3" />
+      </audio>
+
+      <nav class="fixed-bottom mb-3 d-flex justify-content-center">
+        <div
+          class="navbar-minimal shadow-lg rounded-4 border border-white border-opacity-25 px-5 py-3"
+        >
+          <ul class="nav nav-pills gap-4 align-items-center" id="nav-scroll">
+            <li class="nav-item">
+              <a class="nav-link nav-link-minimal active" href="#welcome">
+                <i class="fa-solid fa-house mb-1"></i>
+                <span class="nav-label">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-minimal" href="#mempelai">
+                <i class="fa-solid fa-user-group mb-1"></i>
+                <span class="nav-label">Mempelai</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-minimal" href="#wedding-date">
+                <i class="fa-solid fa-calendar-check mb-1"></i>
+                <span class="nav-label">Acara</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-minimal" href="#gallery">
+                <i class="fa-solid fa-images mb-1"></i>
+                <span class="nav-label">Galeri</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-minimal" href="#rsvp">
+                <i class="fa-solid fa-comment-dots mb-1"></i>
+                <span class="nav-label">Kehadiran</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section
+        id="welcome"
+        class="bg-white position-relative overflow-hidden text-center min-vh-100 d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="position-relative z-3">
+          <h1
+            class="font-esthetic mb-4 pb-3 fw-medium make-blue"
+            style="font-size: 4rem; letter-spacing: 5px;"
+          >
+            Undangan Pernikahan
+          </h1>
+
+          <div
+            class="img-center-crop rounded-circle border border-4 border-light shadow my-4 mx-auto overflow-hidden"
+          >
+            <img
+              src="assets/img/couple5-white.jpeg"
+              alt="Wahyu & Nesha"
+              class="w-100 h-100 object-fit-cover"
+            />
+          </div>
+
+          <h2 class="font-esthetic mt-5 mb-4 display-3 make-gold fw-medium" style="letter-spacing: 5px;">
+            Wahyu & Nesha
+          </h2>
+          
+          <p class="fs-5 mb-4 fw-medium make-blue">
+            Sabtu, 14 Februari 2026
+          </p>
+
+          <a
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Wahyu+%26+Nesha&details=Resepsi+Pernikahan+Wahyu+%26+Nesha+di+Daima+Norwood+Hotel&dates=20260214T090000Z/20260214T140000Z&location=Daima+Norwood+Hotel"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm shadow rounded-pill px-4 py-2"
+          >
+            <i class="fa-solid fa-calendar-check me-2 fa-bounce"></i> Save
+            Google Calendar
+          </a>
+        </div>
+    </section>
+
+      <section
+        id="home"
+        class="bg-alt pt-4 pb-5 text-center bg-theme-auto position-relative z-2"
+      >
+        <div class="container" data-aos="fade-up">
+
+          <h2 class="font-arabic py-4 m-0" style="font-size: 2rem">
+            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+          </h2>
+          <h2 class="font-esthetic py-4 m-0" style="font-size: 2rem">
+            Assalamualaikum Warahmatullahi Wabarakatuh
+          </h2>
+          <p class="pb-4 px-2 m-0" style="font-size: 0.95rem">
+            Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+            menyelenggarakan pernikahan putra-putri kami.
+          </p>
+        </div>
+      </section>
+
+      
+
+      <section id="mempelai" class="py-5 bg-theme-auto">
+        <div class="container">
+          <div
+            class="row justify-content-center align-items-center mb-5"
+            data-aos="fade-right"
+          >
+            <div class="col-md-5 text-center order-md-1">
+              <div class="position-relative d-inline-block">
+                <img
+                  src="assets/img/pria1.jpeg"
+                  alt="Wahyu"
+                  class="rounded-circle shadow-lg border border-3 border-light object-fit-cover"
+                  style="width: 200px; height: 200px"
+                />
+              </div>
+            </div>
+            <div
+              class="col-md-6 text-center text-md-start order-md-2 mt-3 mt-md-0"
+            >
+              <h2
+                class="display-6 fw-bold text-primary-emphasis"
+                style="font-family: &quot;Great Vibes&quot;, cursive"
+              >
+                Wahyu Satrio Mukti
+              </h2>
+              <small class="d-block text-muted mb-2"
+                >(Wahyu Satrio Mukti Hafidz Adzim Mayuqo)</small
+              >
+
+              <p class="mb-1">Putra dari Bpk. (Alm) H Ismail Hasan Zarkasih</p>
+              <p class="mb-3">& Ibu Suprapti</p>
+
+              <a
+                href="https://www.instagram.com/whsatrio?igsh=c3dyeW1xeHljeDEz"
+                target="_blank"
+                class="btn btn-sm btn-outline-secondary rounded-pill"
+              >
+                <i class="fa-brands me-1"></i> @whsatrio
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center my-4 animate-love text-danger opacity-75">
+            <i class="fa-solid fa-heart fa-2x"></i>
+          </div>
+
+          <div
+            class="row justify-content-center align-items-center mt-5"
+            data-aos="fade-left"
+          >
+            <div class="col-md-5 text-center order-md-2">
+              <div class="position-relative d-inline-block">
+                <img
+                  src="assets/img/wanita1.jpeg"
+                  alt="Nesha"
+                  class="rounded-circle shadow-lg border border-3 border-light object-fit-cover"
+                  style="width: 200px; height: 200px"
+                />
+              </div>
+            </div>
+            <div
+              class="col-md-6 text-center text-md-end order-md-1 mb-3 mt-3 mt-md-0"
+            >
+              <h2
+                class="display-6 fw-bold text-primary-emphasis"
+                style="font-family: &quot;Great Vibes&quot;, cursive"
+              >
+                Nesha Aulia
+              </h2>
+
+              <p class="mb-1 mt-2">Putri dari Bpk. (Alm) Bahdin Syarip</p>
+              <p class="mb-3">& Ibu Asmulah</p>
+
+              <a
+                href="https://www.instagram.com/neshaau?igsh=MWRndHh4NmFpa2F4cQ=="
+                target="_blank"
+                class="btn btn-sm btn-outline-secondary rounded-pill"
+              >
+                <i class="fa-brands me-1"></i> @neshaau
+              </a>
+            </div>
+          </div>
+
+          
+        
+        </div>
+      </section>
+
+
+     <div class="container floating-quote-wrapper" data-aos="fade-up">
+        <div class="card card-quote mx-auto" style="min-width: 350px;">
+            <div class="card-body p-4 glass-panel">
+                <i class="fa-solid fa-quote-left fa-2x make-blue mb-4 opacity-75"></i>
+                
+                <p class="fst-italic" style="line-height: 1.2;">
+                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+                    pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
+                    cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+                    antaramu rasa kasih dan sayang."
+                </p>
+                
+                <div class="mt-4">
+                    <span class="">
+                        QS. Ar-Rum: 21
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <section class="bg-white pt-5 mt-5 pb-5" id="wedding-date">
+        <div class="container text-center">
+          <h2 class="font-esthetic py-4 mt-2" style="font-size: 3.5rem">
+            Moment Bahagia
+          </h2>
+
+          <div
+            class="border rounded-pill shadow py-2 px-5 mt-2 mb-4 d-inline-block glass-panel"
+          >
+            <div class="row justify-content-center" style="min-width: 350px">
+              <div class="col-3 p-1">
+                <p class="d-inline m-0 p-0 fw-bold fs-4" id="day">0</p>
+                <small class="d-block text-muted" style="font-size: 0.7rem"
+                  >Hari</small
+                >
+              </div>
+              <div class="col-3 p-1">
+                <p class="d-inline m-0 p-0 fw-bold fs-4" id="hour">0</p>
+                <small class="d-block text-muted" style="font-size: 0.7rem"
+                  >Jam</small
+                >
+              </div>
+              <div class="col-3 p-1">
+                <p class="d-inline m-0 p-0 fw-bold fs-4" id="minute">0</p>
+                <small class="d-block text-muted" style="font-size: 0.7rem"
+                  >Menit</small
+                >
+              </div>
+              <div class="col-3 p-1">
+                <p class="d-inline m-0 p-0 fw-bold fs-4" id="second">0</p>
+                <small class="d-block text-muted" style="font-size: 0.7rem"
+                  >Detik</small
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="py-2 m-0 px-3" style="font-size: 1.5rem">
+            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala,
+            insyaAllah kami akan menyelenggarakan acara:
+          </p>
+
+          <div class="text-center my-3 opacity-50 text-danger">
+            <i class="fa-solid fa-heart animate-love"></i>
+          </div>
+
+          <div class="overflow-x-hidden row justify-content-center">
+            <div
+              class="col-md-5 py-3"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <div class="card border glass-panel h-100" style="box-shadow: none !important;">
+                <div class="card-body">
+                  <h2
+                    class="font-esthetic m-0 pt-2 text-warning"
+                    style="font-size: 2rem"
+                  >
+                    Akad Nikah
+                  </h2>
+                  <hr class="w-25 mx-auto" />
+                  <p class="fw-bold mb-1">Sabtu, 14 Februari 2026</p>
+                  <p class="small">Pukul 16.00 WIB - Selesai</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-5 py-3"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <div class="card border glass-panel h-100" style="box-shadow: none !important;">
+                <div class="card-body">
+                  <h2
+                    class="font-esthetic m-0 pt-2 text-warning"
+                    style="font-size: 2rem"
+                  >
+                    Resepsi
+                  </h2>
+                  <hr class="w-25 mx-auto" />
+                  <p class="fw-bold mb-1">Sabtu, 14 Februari 2026</p>
+                  <p class="small">Pukul 19.00 WIB - Selesai</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="py-2 mt-4 m-0" style="font-size: 0.95rem">
+            Demi kehangatan bersama, kami memohon kesediaan Anda untuk
+            mengenakan dress code senyaman anda:
+          </p>
+
+          <div class="py-2" data-aos="fade-down" data-aos-duration="1500">
+            <p class="small fst-italic pb-5">Formal / Batik / Earth Tone</p>
+          </div>
+        </div>
+      </section>
+
+
+ <div class="container floating-quote-wrapper maps text-center mx-auto" data-aos="fade-up">
+        <div class="card card-quote mx-auto" style="min-width: 350px;">
+            <div class="py-3  glass-panel" data-aos="fade-up" data-aos-duration="1500">
+            <h2 class="fw-bold font-esthetic make-gold py-2">Location</h2>
+            <h5 class="fw-bold">Daima Norwood Hotel</h5>
+            <small class="d-block my-2 px-4 text-muted"
+              >Jl. Teuku Cik Ditiro II No.2, Gondangdia, Kec. Menteng, Jakarta Pusat, DKI Jakarta</small
+            >
+
+            <a
+              href="https://maps.app.goo.gl/bK4vSYryoZnjY4wC8"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm rounded-pill shadow mb-2 px-4 mt-2"
+            >
+              <i class="fa-solid fa-map-location-dot me-2"></i> Lihat Google
+              Maps
+            </a>
+          </div>
+        </div>
+    </div>
+
+<section id="gallery" class="py-5 bg-alt position-relative">
+    <div class="container pt-4">
+        
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="font-esthetic text-navy" style="font-size: 4rem;">Galeri</h2>
+            <p class="text-muted small ls-2 text-uppercase">Our Moments</p>
+        </div>
+
+        <div class="gallery-masonry" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple1-red.jpeg" alt="Foto 1" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple2-red.jpeg" alt="Foto 2" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple1-white.jpeg" alt="Foto 3" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple2-white.jpeg" alt="Foto 3" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple3-white.jpeg" alt="Foto 3" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple4-white.jpeg" alt="Foto 3" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/couple5-white.jpeg" alt="Foto 3" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+             <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/pria1.jpeg" alt="Foto 4" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/pria2.jpeg" alt="Foto 4" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/wanita1.jpeg" alt="Foto 4" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+            <div class="gallery-item" onclick="showModal(this)">
+                <img src="assets/img/wanita2.jpeg" alt="Foto 4" loading="lazy">
+                <div class="overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 position-relative text-center">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="" id="modalImage" class="img-fluid rounded-3 shadow-lg" alt="Preview">
+            </div>
+        </div>
+    </div>
+</div>
+
+      <section class="bg-white pb-5 pt-4" id="gift">
+        <div class="container text-center">
+          <h2 class="font-esthetic pt-5 mb-4" style="font-size: 4rem">
+            Tanda Kasih
+          </h2>
+
+          <div
+            class="mx-auto p-4"
+            style="max-width: 900px"
+            data-aos="fade-up"
+          >
+            <div class="card-body">
+              <div class="mb-4 text-danger opacity-75">
+                <i class="fa-solid fa-hand-holding-heart fa-3x"></i>
+              </div>
+
+              <p class="lead fw-normal mb-4" style="line-height: 1.8">
+                "Tanpa mengurangi rasa hormat, kami tidak menyediakan kotak
+                angpau. Silahkan datang dan nikmati acara bersama kami"
+              </p>
+
+              <p class="mb-0 text-muted">
+                Kehadiran dan doa restu Anda adalah hadiah terindah bagi
+                kami.<br />
+              </p>
+
+              <div class="mt-4">
+                <i class="fa-solid fa-heart make-gold"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section id="rsvp" class="py-5 position-relative">
+    <div class="container pt-4 pb-5" data-aos="fade-up">
+        
+        <div class="text-center mb-5">
+            <h2 class="font-esthetic text-white fw-bold" style="font-size: 4rem;">RSVP</h2>
+            <p class="text-white small ls-2 text-uppercase">Konfirmasi Kehadiran</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 glass-panel">
+                    
+                    <form id="rsvpForm">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="nama" name="nama" placeholder="Nama Anda" required>
+                            <label for="nama" class="text-secondary">Nama Lengkap</label>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control rounded-3" id="jumlah" name="jumlah" placeholder="1" value="1" min="1" required>
+                                    <label for="jumlah" class="text-secondary">Jumlah Hadir (Orang)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select rounded-3" id="status" name="status" required>
+                                        <option value="Hadir">Hadir</option>
+                                        <option value="Tidak Hadir">Maaf, Tidak Bisa</option>
+                                    </select>
+                                    <label for="status" class="text-secondary">Konfirmasi</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control rounded-3" placeholder="Tulis doa..." id="pesan" name="pesan" style="height: 120px"></textarea>
+                            <label for="pesan" class="text-secondary">Ucapan & Doa</label>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="py-2 btn-kirim btn btn-outline-auto btn-lg rounded-pill shadow px-3" style="border: 1px solid #030b38;">
+                                Kirim Konfirmasi
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+      <footer class="bg-alt mt-2 mb-5 py-5 text-center" id="endOfInvitation">
+        <div class="container">
+            <h2 class="font-esthetic mt-3" style="font-size: 2.5rem"> Kami Tunggu Kehadirannya</h2>
+          <h5 class="mb-4 small">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+            Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+          </h5>
+
+          <h2 class="font-esthetic my-4" style="font-size: 1.5rem">
+            Wassalamu’alaikum Wr. Wb.
+          </h2>
+
+          <h2 class="font-esthetic my-3 make-gold" style="font-size: 1.2rem; letter-spacing: 5px;">
+            Wahyu & Nesha
+          </h2>
+
+          <div class="mt-3 mb-5 small text-muted opacity-50">
+            <p class="mb-5">
+              Created with <i class="fa-solid fa-heart text-danger"></i> for
+              Special Moment
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div
+      class="position-fixed d-flex flex-column gap-3"
+      style="bottom: 30px; right: 20px; z-index: 1050"
+    >
+      <button
+        type="button"
+        id="btnMusic"
+        onclick="toggleMusic()"
+        class="btn btn-light border border-secondary rounded-circle shadow p-0 d-flex justify-content-center align-items-center d-none"
+        style="width: 45px; height: 45px"
+        title="Musik"
+      >
+        <i id="iconMusic" class="fa-solid fa-compact-disc fa-spin"></i>
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>

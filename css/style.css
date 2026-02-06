@@ -1,0 +1,386 @@
+@import url("default.css");
+@import url("animation.css");
+
+#hero{
+    width: 100%;
+    height: 100vh !important;
+    overflow: hidden !important;
+}
+
+#hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/couple5-white.jpeg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    z-index: -2;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Putih transparansi 60% */
+    z-index: -1; /* Di atas gambar, di bawah teks */
+}
+
+#hero small {
+    font-style: italic;
+}
+
+.ls-2 { letter-spacing: 3px; }
+
+#hero h4#namaTamu {
+    color: var(--color-navy) !important; /* Nama Tamu jadi Navy */
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#hero h1 {
+    color: var(--color-navy) !important; /* Ganti Hitam jadi Navy */
+    font-weight: 400;
+    font-size: 5rem !important; /* Diperbesar sedikit */
+    text-shadow: 2px 2px 0px rgba(214, 181, 68, 0.1); /* Bayangan emas tipis */
+}
+
+#hero .glass-panel {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(5, 44, 101, 0.08) !important; /* Bayangan Navy halus */
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+}
+
+
+/* Tombol Buka Undangan */
+#hero .btn-outline-auto {
+    letter-spacing: 1px;
+    border: 1px solid var(--color-navy) !important; /* Border Navy */
+    color: var(--color-navy) !important; /* Teks Navy */
+    box-shadow: 0 4px 15px rgba(5, 44, 101, 0.3);
+}
+
+.bg-cover-home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Gunakan gambar background yang diberikan */
+    background-image: url("https://by.ringvitation.com/wp-content/uploads/2025/04/2dasdw.jpg");
+    background-position: top center;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.btn-bukaUndangan{
+    background-color: #f9f9f9;
+}
+
+.btn-kirim:hover,
+.btn-bukaUndangan:hover{
+    background-color: rgba(0, 0, 0, .2) !important;
+    transition: all 0.3s ease;
+}
+
+.img-center-crop {
+    width: 20rem;
+    height: 20rem;
+    transition: transform 0.5s ease;
+    border-color: var(--color-white) !important; /* Border Putih */
+    box-shadow: 0 10px 25px rgba(5, 44, 101, 0.15) !important; /* Shadow Navy */
+}
+
+.img-center-crop:hover {
+    transform: scale(1.05);
+}
+
+/* --- NAVBAR FLOATING (WHITE GLASS) --- */
+nav{
+    position: fixed;
+    z-index: 999;
+}
+
+.navbar-minimal {
+    background: rgba(255, 255, 255, 0.9); /* Putih Kaca */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(214, 181, 68, 0.2); /* Border Emas Tipis */
+    box-shadow: 0 10px 40px rgba(5, 44, 101, 0.1); /* Bayangan Navy Halus */
+    transition: all 0.3s ease;
+    max-width: 95%;
+}
+
+/* Tombol Navbar Default (Mati) */
+.nav-link-minimal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999999; /* Abu-abu soft */
+    background-color: transparent !important;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Ikon Navbar */
+.nav-link-minimal i {
+    font-size: 1.2rem;
+    color: var(--color-navy); /* Ikon default Biru Dongker */
+    opacity: 0.6;
+    transition: color 0.3s ease;
+}
+
+/* Label Navbar */
+.nav-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    margin-top: 4px;
+    color: var(--color-navy);
+    opacity: 0.6;
+}
+
+/* STATE ACTIVE: Emas & Menonjol */
+.nav-link.active.nav-link-minimal {
+    background-color: transparent !important;
+    transform: translateY(-4px);
+}
+
+.nav-link.active.nav-link-minimal i {
+    opacity: 1;
+}
+
+.nav-link.active.nav-link-minimal .nav-label {
+    opacity: 1;
+    font-weight: 700;
+}
+
+/* Hover State */
+.nav-link-minimal:hover:not(.active) i {
+    opacity: 0.8;
+}
+
+/* --- CARDS & FORMS --- */
+.card {
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+}
+
+.form-control, .form-select {
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    color: var(--color-text-heading);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 0.25rem rgba(214, 181, 68, 0.15);
+    background-color: var(--color-white);
+}
+
+/* --- FOOTER --- */
+footer {
+    /* Opsional: Footer background Navy biar kontras di akhir */
+    /* background-color: var(--color-navy) !important; */
+    /* color: var(--color-white) !important; */
+    /* Jika ingin putih saja: */
+    background-color: var(--color-white);
+    color: var(--color-navy);
+}
+
+.particles {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--color-gold);
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatUp 10s infinite linear;
+}
+
+/* Buat posisi random */
+.particle:nth-child(1) { left: 20%; animation-duration: 8s; animation-delay: 0s; }
+.particle:nth-child(2) { left: 50%; animation-duration: 12s; animation-delay: 2s; }
+.particle:nth-child(3) { left: 80%; animation-duration: 10s; animation-delay: 4s; }
+.particle:nth-child(4) { left: 35%; animation-duration: 15s; animation-delay: 1s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    50% { opacity: 0.6; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* --- FLOATING QUOTE CARD --- */
+.floating-quote-wrapper {
+
+    position: relative;
+    z-index: 10; /* Pastikan di atas wave dan section lain */
+    margin-top: 2rem; /* Tarik ke atas supaya menindih section Home */
+    margin-bottom: -8rem; /* Tarik section bawah supaya menempel */
+}
+
+.maps{
+    margin-top: -4rem !important;
+    margin-bottom: 2rem !important;
+}
+
+#wedding-date {
+    padding-top: 8rem !important; /* Jarak dari atas ke section berikutnya */
+}
+
+.floating-quote-wrapper .card-body{
+        border: 1px solid rgba(5, 44, 101, 0.1); /* Border emas tipis */
+    box-shadow: 0 10px 30px rgba(5, 44, 101, 0.1); /* Shadow navy halus */
+    border-radius: 12px;
+}
+
+.card-quote {
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(5, 44, 101, 0.15); /* Shadow Navy halus */
+}
+
+
+/* --- FORM RSVP STYLING --- */
+
+/* Warna Label saat tidak aktif */
+.form-floating label {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Warna Border & Shadow saat Input Aktif */
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 0.25rem rgba(214, 181, 68, 0.1); /* Glow Emas Halus */
+}
+
+/* Custom Scrollbar untuk List Ucapan (Biar tipis & rapi) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+}
+
+/* Helper Class untuk Avatar */
+.bg-navy {
+    background-color: var(--color-navy) !important;
+}
+
+/* Efek Fade Putih di bawah list komentar */
+.bg-gradient-white-up {
+    background: linear-gradient(to top, #ffffff, transparent);
+    pointer-events: none;
+}
+
+
+/* --- GALLERY MASONRY --- */
+.gallery-masonry {
+    column-count: 3; /* Desktop: 3 Kolom */
+    column-gap: 1rem;
+}
+
+.gallery-item {
+    break-inside: avoid; /* Mencegah foto terpotong antar kolom */
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efek Hover: Zoom & Munculkan Icon */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(5, 44, 101, 0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Gelap saat Hover */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 44, 101, 0.4); /* Navy Transparan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay i {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+/* Responsif: Tablet 2 Kolom, HP 2 Kolom (biar ga kepanjangan scrollnya) */
+@media (max-width: 991px) {
+    .gallery-masonry {
+        column-count: 2;
+    }
+}
+
+#rsvp::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/couple1-white.jpeg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -2;
+}
+
+#rsvp::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* Putih transparansi 85% */
+    z-index: -1; /* Di atas gambar, di bawah teks */
+}

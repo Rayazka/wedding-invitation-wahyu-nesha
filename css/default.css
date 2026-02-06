@@ -1,0 +1,125 @@
+/* --- 1. CORE VARIABLES & RESET --- */
+:root {
+    /* Color Palette */
+    --color-gold: #D6B544;
+    --color-gold-hover: #bfa13a;
+    --color-navy: #061f45;
+    --color-white: #fafafa;
+    --color-text-body: #1f1f1f;  /* Abu-abu elegan */
+    --color-text-heading: #1f1f1f;
+
+    /* Bootstrap Overrides (Memaksa tema terang) */
+    --bs-body-bg: var(--color-white);
+    --bs-body-color: var(--color-text-body);
+}
+
+/* --- 1. ALTERNATING BACKGROUNDS --- */
+/* Background Utama (Putih) */
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+/* Background Alternatif (Abu-abu Super Muda - Elegan) */
+.bg-alt {
+    background-color: #f9f9f9 !important; /* Jangan terlalu gelap biar ga kusam */
+    color: var(--color-text-body);
+}
+
+/* --- 2. DIVIDER / WAVE CONFIG --- */
+.divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2; /* Di atas background section */
+}
+
+.divider svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px; /* Tinggi gelombang, sesuaikan selera */
+}
+
+/* Warna Pengisi Divider (PENTING) */
+/* Gunakan ini jika Wave mengarah ke Section Putih */
+.fill-white {
+    fill: #ffffff !important;
+}
+
+/* Gunakan ini jika Wave mengarah ke Section Abu */
+.fill-alt {
+    fill: #f9f9f9 !important;
+}
+
+/* Membalik Wave (Biar ga monoton bentuknya sama terus) */
+.flip-y {
+    transform: rotate(180deg);
+}
+
+.make-gold{
+    color: var(--color-gold) !important;
+}
+
+.make-blue{
+    color: var(--color-navy) !important;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif !important;
+    background-color: var(--color-white) !important;
+    color: var(--color-text-body) !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+/* --- 2. TYPOGRAPHY --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-heading) !important;
+}
+
+.font-esthetic {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+}
+
+.font-arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+    color: var(--color-text-heading);
+}
+
+.text-primary-emphasis {
+    color: var(--color-navy) !important;
+}
+
+.text-muted {
+    color: #888888 !important;
+}
+
+/* --- 4. UTILITIES --- */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(214, 181, 68, 0.15); /* Border emas tipis */
+    box-shadow: 0 8px 32px rgba(5, 44, 101, 0.05); /* Shadow navy tipis */
+}
+
+.bg-theme-auto, 
+.bg-light-dark, 
+.bg-white-black {
+    background-color: var(--color-white) !important;
+}
+
+/* Fix SVG transition */
+svg > path {
+    will-change: color, fill;
+    transition: fill 350ms ease;
+}
