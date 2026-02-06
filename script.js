@@ -1,3 +1,8 @@
+AOS.init({
+  once: false, // Animasi cuma jalan sekali (biar gak gerak2 terus pas scroll naik turun)
+  duration: 1000, // Durasi animasi (1 detik)
+});
+
 // --- FITUR URL CUSTOM NAMA TAMU ---
 window.addEventListener('load', function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -198,138 +203,43 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzrNHnwjuM4_1RU7mx42-
 
 
 // --- LOGIC KIRIM FORM ---
-
 const form = document.getElementById('rsvpForm');
-
 const btnKirim = document.querySelector('.btn-kirim');
-
-const commentsContainer = document.getElementById('comments-container');
 
 
 if (form) {
-
     form.addEventListener('submit', e => {
-
         e.preventDefault(); // MENCEGAH RELOAD HALAMAN (PENTING!)
-
-
         // 1. Ubah tombol jadi loading
-
         btnKirim.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Mengirim...';
-
         btnKirim.disabled = true;
-
-
         // 2. Kirim data ke Google Sheet (Fetch API)
-
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-
             .then(response => {
-
                 // 3. Jika sukses...
-
                 alert("Terima kasih! Ucapan & Konfirmasi Anda berhasil dikirim.");
 
-                
-
                 // Ambil data inputan user untuk ditampilkan di layar
-
                 const nama = document.getElementById('nama').value;
-
                 const jumlah = document.getElementById('jumlah').value;
-
                 const status = document.getElementById('status').value;
-
                 let pesan = document.getElementById('pesan').value;
 
-                
-
                 // Kalau pesan kosong, kasih default
-
                 if (!pesan || pesan.trim() === "") {
-
-                    pesan = "Mengirimkan doa restu untuk kedua mempelai.";
-
+                    pesan = "";
                 }
-
-
-                const inisial = nama.charAt(0).toUpperCase();
-
-
-                // Tentukan warna badge
-
-                let badgeHtml = '';
-
-                if (status === 'Hadir') {
-
-                    badgeHtml = `<span class="badge bg-success-subtle text-success rounded-pill ms-2 fw-normal" style="font-size: 0.7rem;">Hadir (${jumlah})</span>`;
-
-                } else {
-
-                    badgeHtml = `<span class="badge bg-danger-subtle text-danger rounded-pill ms-2 fw-normal" style="font-size: 0.7rem;">Tidak Hadir</span>`;
-
-                }
-
-
-                // Buat elemen HTML komentar baru
-
-                const newComment = `
-
-                <div class="d-flex mb-4 fade-in-up">
-
-                    <div class="flex-shrink-0">
-
-                        <div class="rounded-circle bg-navy d-flex align-items-center justify-content-center text-white fw-bold shadow-sm" style="width: 50px; height: 50px; font-size: 1.2rem;">${inisial}</div>
-
-                    </div>
-
-                    <div class="flex-grow-1 ms-3">
-
-                        <h6 class="fw-bold text-navy mb-1">${nama} ${badgeHtml}</h6>
-
-                        <p class="text-muted small mb-1">Baru saja</p>
-
-                        <div class="bg-alt p-3 rounded-3 mt-2 position-relative">
-
-                            <div class="position-absolute top-0 start-0 translate-middle" style="margin-left: 20px; margin-top: 2px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #f9f9f9;"></div>
-
-                            <p class="mb-0 text-dark fst-italic">"${pesan}"</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                `;
-
-
-                // Masukkan komentar baru ke paling atas list
-
-                commentsContainer.insertAdjacentHTML('afterbegin', newComment);
-
-                
-
                 // Reset form & tombol
-
                 form.reset();
-
                 btnKirim.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i> Kirim Konfirmasi';
-
                 btnKirim.disabled = false;
 
             })
-
             .catch(error => {
-
                 console.error('Error!', error.message);
-
                 alert("Yah, gagal mengirim pesan. Coba lagi ya!");
-
                 btnKirim.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i> Kirim Konfirmasi';
-
                 btnKirim.disabled = false;
-
             });
 
     });

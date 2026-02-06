@@ -113,7 +113,6 @@ nav{
     border: 1px solid rgba(214, 181, 68, 0.2); /* Border Emas Tipis */
     box-shadow: 0 10px 40px rgba(5, 44, 101, 0.1); /* Bayangan Navy Halus */
     transition: all 0.3s ease;
-    max-width: 95%;
 }
 
 /* Tombol Navbar Default (Mati) */
