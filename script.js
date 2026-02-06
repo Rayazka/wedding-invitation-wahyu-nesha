@@ -1,3 +1,20 @@
+// --- FITUR URL CUSTOM NAMA TAMU ---
+window.addEventListener('load', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const namaTamu = urlParams.get('to') || urlParams.get('u'); 
+    if (namaTamu) {
+        const heroNama = document.getElementById('namaTamu');
+        if (heroNama) {
+            heroNama.innerText = namaTamu;
+        }
+        const inputNama = document.getElementById('nama');
+        if (inputNama) {
+            inputNama.value = namaTamu;
+        }
+    }
+    // Jika tidak ada parameter, biarkan default "Tamu Undangan" (sesuai HTML)
+});
+
 // --- SCROLLSPY MODERN (INTERSECTION OBSERVER) ---
 document.addEventListener("DOMContentLoaded", function() {
     
