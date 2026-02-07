@@ -184,6 +184,65 @@ nav{
     background-color: var(--color-white);
 }
 
+/* --- MOBILE RESPONSIVE NAVBAR FIX --- */
+@media (max-width: 576px) { 
+    /* Angka 576px mencakup semua HP Android & iPhone */
+
+    /* 1. Container Navbar: Kurangi Padding & Lebarkan */
+    .navbar-minimal {
+        padding: 15px 10px !important; /* Timpa px-5 yang terlalu tebal */
+        width: 90% !important; /* Hampir full layar */
+        max-width: 90% !important;
+        bottom: 10px !important; /* Jarak dari bawah layar */
+        border-radius: 15px !important; /* Radius agak kotak dikit biar luas */
+    }
+
+    /* 2. List Menu (UL): Paksa Satu Baris (No Wrap) */
+    #nav-scroll {
+        flex-wrap: nowrap !important; /* KUNCI: Dilarang turun baris */
+        gap: 0 !important; /* Hapus gap antar menu, kita pakai space-between */
+        justify-content: space-between !important; /* Bagi rata jaraknya */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 3. Item List (LI): Bagi rata lebar area sentuh */
+    .nav-item {
+        flex: 1; /* Tiap menu dapat jatah lebar yang sama (20%) */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 4. Link (A): Hapus padding internal */
+    .nav-link-minimal {
+        padding: 4px 0 !important;
+        width: 100%; /* Area klik full */
+    }
+
+    /* 5. IKON (i): Kecilkan Ukuran agar muat */
+    .nav-link-minimal i {
+        font-size: 1.1rem !important; /* Ukuran ideal di HP (sekitar 18px) */
+        margin-bottom: 2px !important;
+    }
+
+    /* 6. LABEL TEXT: Kecilkan Font */
+    .nav-label {
+        font-size: 0.6rem !important; /* Sekitar 10px */
+        letter-spacing: 0; /* Rapatkan huruf */
+        line-height: 1;
+        display: block; /* Pastikan tetap muncul */
+    }
+}
+
+@media (max-width: 370px) {
+    .nav-link-minimal i {
+        font-size: 1rem !important; /* Besarkan icon kompensasi teks hilang */
+        margin-bottom: 0 !important;
+    }
+}
+
 /* --- FOOTER --- */
 footer {
     /* Opsional: Footer background Navy biar kontras di akhir */

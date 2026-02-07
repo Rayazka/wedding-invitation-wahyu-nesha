@@ -1,7 +1,14 @@
 AOS.init({
   once: false, // Animasi cuma jalan sekali (biar gak gerak2 terus pas scroll naik turun)
   duration: 1000, // Durasi animasi (1 detik)
+  once: true, // Animasi ulang setiap kali scroll
+    easing: 'ease-in-out', // Efek easing
+    
 });
+
+document.querySelectorAll('img').forEach((img) => img.addEventListener('load',() => {
+  AOS.refresh(); // Refresh AOS setelah gambar dimuat
+}));
 
 // --- FITUR URL CUSTOM NAMA TAMU ---
 window.addEventListener('load', function() {
@@ -109,6 +116,10 @@ function bukaUndangan() {
     setTimeout(() => {
         window.scrollTo(0, 0);
     }, 500);
+
+    setTimeout(() => {
+        AOS.refresh(); 
+    }, 800);
 }
 
 // --- LOGIC MUSIK (FIXED) ---
