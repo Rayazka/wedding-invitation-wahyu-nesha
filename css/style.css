@@ -184,9 +184,36 @@ nav{
     background-color: var(--color-white);
 }
 
+.div-btn-music{
+    bottom: 30px; right: 20px; z-index: 1050;
+}
+
+.countdown-wrapper {
+    min-width: 350px;
+}
+
 /* --- MOBILE RESPONSIVE NAVBAR FIX --- */
 @media (max-width: 576px) { 
-    /* Angka 576px mencakup semua HP Android & iPhone */
+    .div-btn-music{
+        bottom: 100px !important; /* Geser ke atas supaya ga tabrakan */
+    }
+
+    .countdown-wrapper {
+        min-width: 0 !important; /* Hapus batasan lebar minimal */
+        width: 90% !important;   /* Lebar mengikuti layar HP (90%) */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Kecilkan Angka Waktu (fs-4 ke ukuran HP) */
+    .countdown-wrapper .fs-4 {
+        font-size: 1.5rem !important; /* Ukuran angka pas di HP */
+    }
+
+    /* Kecilkan Label (Hari, Jam, dll) */
+    .countdown-wrapper small {
+        font-size: 0.6rem !important;
+    }
 
     /* 1. Container Navbar: Kurangi Padding & Lebarkan */
     .navbar-minimal {
